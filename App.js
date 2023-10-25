@@ -4,7 +4,7 @@ import React from 'react';
 const App = () => {
   return (
     <View style={{backgroundColor: 'pink'}}>
-      <Text>aulinha cria</Text>
+      <Text>aaa muita coisa aqui</Text>
     </View>
   );
 };
