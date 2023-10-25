@@ -4,7 +4,7 @@ import React from 'react';
 const App = () => {
   return (
     <View style={{backgroundColor: 'pink'}}>
-      <Text>oi</Text>
+      <Text>aulinha cria</Text>
     </View>
   );
 };
