@@ -7,6 +7,7 @@ import {
   Image,
 } from 'react-native';
 import React from 'react';
+import SvgVoltar from './svgs/seta-esquerda.svg';
 
 const App = () => {
   return (
@@ -15,12 +16,16 @@ const App = () => {
       <View style={styles.container2}>
         <TouchableOpacity
           style={{
-            backgroundColor: 'pink',
             position: 'absolute',
             left: 15,
             top: 15,
+            flexDirection: 'row',
+            alignItems: 'center',
           }}>
-          <Text>Voltar</Text>
+          <View style={{marginRight: 5}}>
+            <SvgVoltar width={16} height={16} color="white"></SvgVoltar>
+          </View>
+          <Text style={{color: 'white'}}>Voltar</Text>
         </TouchableOpacity>
         <View style={styles.container3}>
           <Text style={styles.fontMinhasDespesas}>Minhas despesas</Text>
