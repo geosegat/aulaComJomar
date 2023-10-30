@@ -5,6 +5,7 @@ import {
   StatusBar,
   Touchable,
   TouchableOpacity,
+  ScrollView,
 } from 'react-native';
 import React from 'react';
 import SvgVoltar from './svgs/seta-esquerda.svg';
@@ -12,7 +13,7 @@ import SvgCheck from './svgs/icon-check-green.svg';
 
 const App = () => {
   return (
-    <View>
+    <View style={{flex: 1}}>
       <StatusBar backgroundColor="#09498F" />
       <View style={styles.containerStatusBar}>
         <TouchableOpacity style={styles.containerButtonVoltar}>
@@ -53,6 +54,9 @@ const App = () => {
           </View>
         </View>
       </View>
+      <TouchableOpacity style={styles.containerSalvarDespesa}>
+        <Text style={styles.fontSalvarDespesa}>SALVAR DESPESA</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -68,6 +72,7 @@ const styles = StyleSheet.create({
   },
   containerScreen: {
     padding: 15,
+    flex: 1,
   },
   containerButtonVoltar: {
     flexDirection: 'row',
@@ -95,4 +100,10 @@ const styles = StyleSheet.create({
   fontText: {color: '#333', fontWeight: '500', fontSize: 18},
   containerCheck: {flexDirection: 'row', alignItems: 'center'},
   containerButtonIr: {transform: [{rotateZ: '180deg'}], marginLeft: 5},
+  containerSalvarDespesa: {
+    padding: 25,
+    backgroundColor: '#09498F',
+    alignItems: 'center',
+  },
+  fontSalvarDespesa: {fontSize: 18, color: '#FFF', fontWeight: '700'},
 });
