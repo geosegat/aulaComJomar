@@ -4,7 +4,10 @@ import React from 'react';
 const App = () => {
   return (
     <View>
-      <Text>App</Text>
+      <Text style={{fontSize: 25}}>
+        Bicho pegando vapo vapo todo vapor Bicho pegando vapo vapo todo vapor
+        Bicho pegando vapo vapo todo vapor
+      </Text>
     </View>
   );
 };
