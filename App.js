@@ -20,7 +20,11 @@ const App = () => {
         <Text style={styles.fontDadosBancarios}>Dados Bancários</Text>
         <Text style={styles.fontEtapasText}>Etapa 2 de 3</Text>
       </View>
-      <View style={{flex: 1, backgroundColor: 'pink'}}></View>
+      <View style={{flex: 1, backgroundColor: 'white', padding: 15}}>
+        <TouchableOpacity style={styles.subContainer}>
+          <Text style={styles.fontAddNovaConta}>+ ADICIONAR NOVA CONTA</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -45,4 +49,13 @@ const styles = StyleSheet.create({
   fontButtonVoltar: {fontSize: 17, color: '#FFF'},
   fontDadosBancarios: {fontSize: 17, color: '#FFF', fontWeight: '500'},
   fontEtapasText: {fontSize: 12, color: '#FFF'},
+  subContainer: {
+    borderWidth: 1,
+    borderStyle: 'dashed',
+    borderColor: '#09498F',
+    borderRadius: 5,
+    alignItems: 'center',
+    padding: 15,
+  },
+  fontAddNovaConta: {fontSize: 14, fontWeight: '500', color: '#09498F'},
 });
