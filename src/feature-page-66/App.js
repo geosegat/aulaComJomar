@@ -13,7 +13,6 @@ const App = () => {
     <View style={styles.containerScreen}>
       <StatusBar backgroundColor="#09498F" />
       <View style={styles.containerBoxCenter}>
-        <View style={styles.containerMargin25} />
         <View style={styles.containerCheck}>
           <SvgCheck />
         </View>
@@ -57,17 +56,28 @@ const styles = StyleSheet.create({
   },
   containerBoxCenter: {
     padding: 15,
+    paddingTop: 25,
     backgroundColor: '#FFF',
     justifyContent: 'center',
     borderRadius: 15,
     borderTopWidth: 3,
     borderColor: '#BBB',
   },
-  containerMargin25: {marginBottom: 25},
-  containerCheck: {marginBottom: 22, alignItems: 'center'},
-  containerHeader: {marginBottom: 20, alignItems: 'center'},
+  containerMargin25: {},
+  containerCheck: {
+    marginBottom: 22,
+    alignItems: 'center',
+  },
+  containerHeader: {
+    marginBottom: 20,
+  },
 
-  fontHeaderText: {fontSize: 18, color: '#09498F', fontWeight: '500'},
+  fontHeaderText: {
+    fontSize: 18,
+    color: '#09498F',
+    fontWeight: '500',
+    textAlign: 'center',
+  },
   containerNumeroDoProtocolo: {
     backgroundColor: '#EEE',
     borderRadius: 10,
