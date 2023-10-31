@@ -1,14 +1,10 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {View, TouchableOpacity, Text} from 'react-native';
 import React from 'react';
+import Button from './src/components/Button';
+import Navbar from './src/components/Navbar';
 
 const App = () => {
-  return (
-    <View>
-      <Text>App</Text>
-    </View>
-  );
+  return <Navbar />;
 };
 
 export default App;
-
-const styles = StyleSheet.create({});
