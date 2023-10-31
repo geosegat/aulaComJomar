@@ -38,7 +38,7 @@ const App = () => {
           <View style={styles.containerCheck}>
             <SvgCheck></SvgCheck>
             <TouchableOpacity style={styles.containerButtonIr}>
-              <SvgVoltar color="#09498F" width={15} height={15} />
+              <SvgVoltar color="#09498F" width={12} height={12} />
             </TouchableOpacity>
           </View>
         </View>
@@ -49,7 +49,7 @@ const App = () => {
           <View style={styles.containerCheck}>
             <SvgCheck></SvgCheck>
             <TouchableOpacity style={styles.containerButtonIr}>
-              <SvgVoltar color="#09498F" width={15} height={15} />
+              <SvgVoltar color="#09498F" width={12} height={12} />
             </TouchableOpacity>
           </View>
         </View>
@@ -68,7 +68,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#09498F',
     alignItems: 'center',
     padding: 15,
-    marginBottom: 10,
+    marginBottom: 5,
   },
   containerScreen: {
     padding: 15,
@@ -96,14 +96,14 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     marginBottom: 10,
   },
-  containerText: {flex: 1},
-  fontText: {color: '#333', fontWeight: '500', fontSize: 18},
+  containerText: {flex: 1, marginRight: 15},
+  fontText: {color: '#333', fontWeight: '500'},
   containerCheck: {flexDirection: 'row', alignItems: 'center'},
-  containerButtonIr: {transform: [{rotateZ: '180deg'}], marginLeft: 5},
+  containerButtonIr: {transform: [{rotateZ: '180deg'}], marginLeft: 8},
   containerSalvarDespesa: {
     padding: 25,
     backgroundColor: '#09498F',
     alignItems: 'center',
   },
-  fontSalvarDespesa: {fontSize: 18, color: '#FFF', fontWeight: '700'},
+  fontSalvarDespesa: {fontSize: 16, color: '#FFF', fontWeight: '700'},
 });
