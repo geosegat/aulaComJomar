@@ -5,7 +5,7 @@ import SvgAdd from './../../../svgs/botao-adicionar.svg';
 const Navbar = ({label, labelSub, botaoAdd = false, botaoVoltar = true}) => {
   return (
     <View style={styles.containerStatusBar}>
-      <View style={{flex: 0}}>
+      <View style={{position: 'absolute', left: 5}}>
         {botaoVoltar && (
           <TouchableOpacity style={styles.botaoVoltar}>
             <SvgVoltar width={18} height={18} color={'#fff'} />
@@ -13,7 +13,7 @@ const Navbar = ({label, labelSub, botaoAdd = false, botaoVoltar = true}) => {
           </TouchableOpacity>
         )}
       </View>
-      <View style={{alignItems: 'center', flex: 1}}>
+      <View style={{alignItems: 'center'}}>
         <Text style={styles.fontHeaderBar}> {label ?? 'Nada ainda'}</Text>
         {labelSub && (
           <Text style={styles.fontSubHeaderBar}>
@@ -22,10 +22,10 @@ const Navbar = ({label, labelSub, botaoAdd = false, botaoVoltar = true}) => {
         )}
       </View>
 
-      <View style={{position: 'absolute', top: 12, right: 5}}>
+      <View style={{position: 'absolute', right: 10}}>
         {botaoAdd && (
           <TouchableOpacity style={styles.BotaoAdd}>
-            <SvgAdd width={25} height={25} color={'#fff'} />
+            <SvgAdd width={28} height={28} color={'#fff'} />
           </TouchableOpacity>
         )}
       </View>
