@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, StatusBar} from 'react-native';
 import React from 'react';
 import CardDados from './src/components/CardCadastrais/index';
 import CardBorder from './src/components/CardWithBorder/index';
@@ -10,19 +10,22 @@ import AppText from './src/components/AppText';
 const App = () => {
   return (
     <View>
-      <View style={styles.marginBot}>
-        <Navbar label={'Dados bancários'} labelSub={'etapas'} />
+      <View style={styles.marginBotNavBar}>
+        <Navbar label={'Dados bancários'} labelSub={'Etapa 2 de 3'} />
       </View>
-      <View style={{marginHorizontal: 15, marginBottom: 20}}>
+      <View style={styles.marginButtonAddConta}>
         <BotaoAddConta />
       </View>
-      <View style={{marginHorizontal: 15}}>
-        <View style={{marginBottom: 10}}>
+      <View style={styles.containeHeaderCard}>
+        <View style={styles.marginCard}>
           <AppText size="xxlarge" variant="semiBold">
             Contas cadastradas
           </AppText>
         </View>
-        <View style={{marginBottom: 10}}>
+        <View style={styles.marginCard}>
+          <CardCadastrais />
+        </View>
+        <View style={styles.marginCard}>
           <CardCadastrais />
         </View>
         <CardCadastrais />
@@ -34,5 +37,11 @@ const App = () => {
 export default App;
 
 const styles = StyleSheet.create({
-  marginBot: {marginBottom: 20},
+  marginBotNavBar: {marginBottom: 20},
+  marginButtonAddConta: {
+    marginHorizontal: 15,
+    marginBottom: 20,
+  },
+  containeHeaderCard: {marginHorizontal: 15},
+  marginCard: {marginBottom: 10},
 });
