@@ -5,13 +5,14 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import SvgVoltar from './svgs/seta-esquerda.svg';
 import BotaoAdd from './svgs/botao-adicionar.svg';
 import BotaoEdit from './svgs/icon-editar.svg';
 import BotaoClose from './svgs/icon-close.svg';
 
 const App = () => {
+  const [state, setState] = useState(false);
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor="#09498F" />

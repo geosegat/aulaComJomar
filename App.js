@@ -1,23 +1,18 @@
-import {View, TouchableOpacity, Text} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Button from './src/components/Button';
-import Navbar from './src/components/Navbar';
-import CardPrestador from './src/components/CardPrestadorIndicados';
+import CardDados from './src/components/CardCadastrais/index';
+import CardBorder from './src/components/CardWithBorder/index';
+import CardCadastrais from './src/components/CardCadastrais/index';
+import BotaoAddConta from './src/components/BotaoAddConta/index';
 
 const App = () => {
   return (
-    <View style={{flex: 1}}>
-      <Navbar label={'Rede Credenciada'}></Navbar>
-      <View style={{flex: 1}}>
-        <View>
-          <CardPrestador color={'#68B828'} />
-        </View>
-        <CardPrestador />
-        <CardPrestador />
-      </View>
-      <Button label={'BOTAO'} color={'#09498F'} />
+    <View>
+      <BotaoAddConta />
     </View>
   );
 };
 
 export default App;
+
+const styles = StyleSheet.create({});
