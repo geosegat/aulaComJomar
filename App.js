@@ -11,7 +11,7 @@ const App = () => {
   return (
     <View>
       <View style={styles.marginBot}>
-        <Navbar label={'Dados bancários'} labelSub={'etapas'} />
+        <Navbar label={'Dados bancários'} labelSub={'Etapa 2 de 3'} />
       </View>
       <View style={{marginHorizontal: 15, marginBottom: 20}}>
         <BotaoAddConta />
