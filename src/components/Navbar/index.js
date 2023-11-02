@@ -1,10 +1,17 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  StatusBar,
+} from 'react-native';
 import React from 'react';
 import SvgVoltar from './../../../svgs/seta-esquerda.svg';
 import SvgAdd from './../../../svgs/botao-adicionar.svg';
 const Navbar = ({label, labelSub, botaoAdd = false, botaoVoltar = true}) => {
   return (
     <View style={styles.containerStatusBar}>
+      <StatusBar backgroundColor={'#09498F'} />
       <View style={{position: 'absolute', left: 5}}>
         {botaoVoltar && (
           <TouchableOpacity style={styles.botaoVoltar}>
