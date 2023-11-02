@@ -2,10 +2,10 @@ import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import SvgVoltar from './../../../svgs/seta-esquerda.svg';
 import SvgAdd from './../../../svgs/botao-adicionar.svg';
-const Navbar = ({label, botaoAdd = false, botaoVoltar}) => {
+const Navbar = ({label, botaoAdd = false, botaoVoltar = true}) => {
   return (
     <View style={styles.containerStatusBar}>
-      {botaoVoltar ?? (
+      {botaoVoltar && (
         <TouchableOpacity style={styles.botaoVoltar}>
           <SvgVoltar width={18} height={18} color={'#fff'} />
           <Text style={styles.fontVoltar}>Voltar</Text>

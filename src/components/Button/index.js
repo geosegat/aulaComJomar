@@ -1,9 +1,10 @@
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 
 const Button = ({label, color, textColor}) => {
   const buttonStyle = [styles.botao, {backgroundColor: color}];
   const textStyle = [styles.fontText, {color: textColor ?? '#fff'}];
+  const [state, setState] = useState(false);
   return (
     <TouchableOpacity style={buttonStyle}>
       <Text style={textStyle}> {label ?? 'BOTÃO'}</Text>
