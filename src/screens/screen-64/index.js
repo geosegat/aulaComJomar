@@ -1,9 +1,9 @@
 import {StyleSheet, Text, View, StatusBar} from 'react-native';
 import React from 'react';
-import Navbar from '../../components/Navbar';
 import BotaoAddConta from '../../components/BotaoAddConta';
 import AppText from '../../components/AppText';
-import CardCadastrais from '../../components/CardCadastrais';
+import BlueCard from '../../components/BlueCard';
+import Navbar from '../../components/Navbar';
 
 const Screen64 = () => {
   return (
@@ -21,7 +21,7 @@ const Screen64 = () => {
           </AppText>
         </View>
         <View style={styles.marginCard}>
-          <CardCadastrais
+          <BlueCard
             labelHeader={'Banco do Brasil'}
             labelName={'Victor Hugo Prando da Silva'}
             labelAg={'0070'}
@@ -29,10 +29,10 @@ const Screen64 = () => {
           />
         </View>
         <View style={styles.marginCard}>
-          <CardCadastrais />
+          <BlueCard />
         </View>
 
-        <CardCadastrais />
+        <BlueCard />
       </View>
     </View>
   );
