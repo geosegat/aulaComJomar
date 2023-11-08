@@ -1,10 +1,11 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import Screen64 from './src/screens/screen-64';
 
 const App = () => {
   return (
     <View>
-      <Text>App</Text>
+      <Screen64></Screen64>
     </View>
   );
 };

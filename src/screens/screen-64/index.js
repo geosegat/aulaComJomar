@@ -4,6 +4,7 @@ import BotaoAddConta from '../../components/BotaoAddConta';
 import AppText from '../../components/AppText';
 import BlueCard from '../../components/BlueCard';
 import Navbar from '../../components/Navbar';
+import App from '../../../App';
 
 const Screen64 = () => {
   return (
@@ -21,18 +22,37 @@ const Screen64 = () => {
           </AppText>
         </View>
         <View style={styles.marginCard}>
-          <BlueCard
-            labelHeader={'Banco do Brasil'}
-            labelName={'Victor Hugo Prando da Silva'}
-            labelAg={'0070'}
-            labelCc={'232323'}
-          />
+          <BlueCard>
+            <View style={styles.marginBottomTextCard}>
+              <AppText variant="semiBold">Banco do Brasil SA</AppText>
+            </View>
+            <View style={styles.marginBottomTextCard}>
+              <AppText size="small">Victor Hugo Prando da Silva</AppText>
+            </View>
+            <View style={styles.containerFlexRow}>
+              <AppText size="small">Ag.: 0070</AppText>
+              <View style={{marginLeft: 20}}>
+                <AppText size="small">CC: 12099-0</AppText>
+              </View>
+            </View>
+          </BlueCard>
         </View>
         <View style={styles.marginCard}>
-          <BlueCard />
+          <BlueCard>
+            <View style={styles.marginBottomTextCard}>
+              <AppText variant="semiBold">Banco do Brasil SA</AppText>
+            </View>
+            <View style={styles.marginBottomTextCard}>
+              <AppText size="small">Victor Hugo Prando da Silva</AppText>
+            </View>
+            <View style={styles.containerFlexRow}>
+              <AppText size="small">Ag.: 0070</AppText>
+              <View style={{marginLeft: 20}}>
+                <AppText size="small">CC: 12099-0</AppText>
+              </View>
+            </View>
+          </BlueCard>
         </View>
-
-        <BlueCard />
       </View>
     </View>
   );
@@ -48,4 +68,6 @@ const styles = StyleSheet.create({
   },
   containeHeaderCard: {marginHorizontal: 15},
   marginCard: {marginBottom: 10},
+  marginBottomTextCard: {marginBottom: 2},
+  containerFlexRow: {flexDirection: 'row'},
 });
