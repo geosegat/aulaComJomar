@@ -8,23 +8,29 @@ import {
 import React from 'react';
 import SvgVoltar from './../../../svgs/seta-esquerda.svg';
 import SvgAdd from './../../../svgs/botao-adicionar.svg';
-const Navbar = ({label, labelSub, botaoAdd = false, botaoVoltar = true}) => {
+const Navbar = ({
+  label,
+  etapaInicio,
+  etapaFim,
+  botaoAdd = false,
+  botaoVoltar = true,
+}) => {
   return (
     <View style={styles.containerStatusBar}>
       <StatusBar backgroundColor={'#09498F'} />
       <View style={{position: 'absolute', left: 5}}>
         {botaoVoltar && (
           <TouchableOpacity style={styles.botaoVoltar}>
-            <SvgVoltar width={18} height={18} color={'#fff'} />
+            <SvgVoltar width={20} height={20} color={'#fff'} />
             <Text style={styles.fontVoltar}>Voltar</Text>
           </TouchableOpacity>
         )}
       </View>
       <View style={{alignItems: 'center'}}>
         <Text style={styles.fontHeaderBar}> {label ?? 'Nada ainda'}</Text>
-        {labelSub && (
+        {etapaInicio && etapaFim && (
           <Text style={styles.fontSubHeaderBar}>
-            {labelSub ?? 'Nada ainda'}
+            {`Etapa ${etapaInicio} de ${etapaFim}`}
           </Text>
         )}
       </View>
@@ -45,7 +51,7 @@ export default Navbar;
 const styles = StyleSheet.create({
   containerStatusBar: {
     backgroundColor: '#09498F',
-    padding: 12,
+    padding: 10,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
