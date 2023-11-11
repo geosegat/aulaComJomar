@@ -1,9 +1,9 @@
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 
-const BotaoAddConta = ({label}) => {
+const BotaoAddConta = ({label, style}) => {
   return (
-    <TouchableOpacity style={styles.containerButton}>
+    <TouchableOpacity style={[styles.containerButton, style]}>
       <Text style={styles.fontLabel}>{label ?? '+ ADICIONAR NOVA CONTA'}</Text>
     </TouchableOpacity>
   );

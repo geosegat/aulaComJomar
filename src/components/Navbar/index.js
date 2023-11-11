@@ -14,9 +14,10 @@ const Navbar = ({
   etapaFim,
   botaoAdd = false,
   botaoVoltar = true,
+  style,
 }) => {
   return (
-    <View style={styles.containerStatusBar}>
+    <View style={[styles.containerStatusBar, style]}>
       <StatusBar backgroundColor={'#09498F'} />
       <View style={{position: 'absolute', left: 5}}>
         {botaoVoltar && (

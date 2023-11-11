@@ -4,7 +4,7 @@ import Screen64 from './src/screens/screen-64';
 import Screen74 from './src/screens/screen-74';
 
 const App = () => {
-  return <Screen74></Screen74>;
+  return <Screen64 />;
 };
 
 export default App;

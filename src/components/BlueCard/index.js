@@ -3,9 +3,9 @@ import React from 'react';
 import SvgSeta from './../../../svgs/seta-esquerda.svg';
 import IconCheck from './../../../svgs/check-sucess.svg';
 
-const BlueCard = ({children, showCheckIcon, showRightArrow = true}) => {
+const BlueCard = ({children, style, showCheckIcon, showRightArrow = true}) => {
   return (
-    <TouchableOpacity style={styles.containerCardBlue}>
+    <TouchableOpacity style={[styles.containerCardBlue, style]}>
       <View style={styles.flex}>{children}</View>
       <View style={styles.iconsContainer}>
         {!!showCheckIcon && (
