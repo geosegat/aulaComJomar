@@ -4,35 +4,39 @@ import Navbar from '../../components/Navbar';
 import AppText from '../../components/AppText';
 import BlueCard from '../../components/BlueCard';
 import Button from '../../components/Button';
+import CardSelect from '../../components/CardSelect';
 
 const Screen74 = () => {
+  const docNecessarios = [
+    {label: 'Nota fiscal ou recibo - Consulta médica', isChecked: false},
+    {label: 'Autorização', isChecked: true},
+  ];
   return (
     <View style={styles.flex1}>
-      <View style={styles.marginBotNavBar}>
-        <Navbar label={'Comprovantes'}></Navbar>
+      <Navbar label={'Comprovantes'}></Navbar>
+      <View style={styles.containerInterno}>
+        <AppText
+          style={styles.marginText}
+          size="xxlarge"
+          variant="semiBold"
+          color="#333">
+          Documentos necessários
+        </AppText>
+        {docNecessarios.map(dn => {
+          return (
+            <CardSelect
+              key={Math.random()}
+              label={dn.label}
+              style={styles.containerBlueCard}
+              isChecked={dn.isChecked}
+            />
+          );
+        })}
       </View>
-      <View style={styles.flex1}>
-        <View style={styles.marginText}>
-          <AppText size="xxlarge" variant="semiBold" color="#333">
-            Documentos necessários
-          </AppText>
-        </View>
-        <View style={styles.containerBlueCard}>
-          <BlueCard>
-            <AppText variant="semiBold" color="#333" size="large">
-              Nota fiscal ou recibo - Consulta médica
-            </AppText>
-          </BlueCard>
-        </View>
-        <View style={styles.containerBlueCard}>
-          <BlueCard>
-            <AppText variant="semiBold" color="#333" size="large">
-              Autorização
-            </AppText>
-          </BlueCard>
-        </View>
-      </View>
-      <Button label={'SALVAR DESPESA'} color={'#09498F'}></Button>
+      <Button
+        variant="round"
+        label={'SALVAR DESPESA'}
+        color={'#09498F'}></Button>
     </View>
   );
 };
@@ -40,8 +44,8 @@ const Screen74 = () => {
 export default Screen74;
 
 const styles = StyleSheet.create({
-  marginBotNavBar: {marginBottom: 20},
-  marginText: {marginHorizontal: 15, marginBottom: 20},
-  containerBlueCard: {marginHorizontal: 15, marginBottom: 13},
+  marginText: {marginBottom: 20},
+  containerBlueCard: {marginBottom: 13},
   flex1: {flex: 1},
+  containerInterno: {flex: 1, padding: 15},
 });
