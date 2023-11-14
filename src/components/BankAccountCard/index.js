@@ -3,9 +3,16 @@ import React from 'react';
 import BlueCard from '../BlueCard';
 import AppText from '../AppText';
 
-const BankAccountCard = ({bankName, nomeTitular, agencia, conta, style}) => {
+const BankAccountCard = ({
+  bankName,
+  nomeTitular,
+  agencia,
+  conta,
+  style,
+  showRightArrow = true,
+}) => {
   return (
-    <BlueCard style={style}>
+    <BlueCard style={style} showRightArrow={showRightArrow}>
       <AppText style={styles.marginBottomTextCard} variant="semiBold">
         {bankName}
       </AppText>
