@@ -1,15 +1,15 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import ExpenseCard from './src/refundComponents/ExpenseCard';
+import AppText from '../../components/AppText';
 
-const App = () => {
+const ExpenseCard = () => {
   return (
     <View>
-      <ExpenseCard></ExpenseCard>
+      <AppText></AppText>
     </View>
   );
 };
 
-export default App;
+export default ExpenseCard;
 
 const styles = StyleSheet.create({});
