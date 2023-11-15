@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     borderColor: '#888',
     borderRadius: 5,
     backgroundColor: '#fff',
-    elevation: 5,
+    elevation: 1,
   },
   containerProtocoleButton: {flexDirection: 'row'},
   containerProtocolFlex: {flex: 1},
