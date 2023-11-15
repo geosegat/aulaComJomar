@@ -11,6 +11,7 @@ const BankAccountCard = ({
   bankAccount,
   style,
   showSetaIcon = false,
+  onPressSetaIr,
 }) => {
   return (
     <View style={[styles.containerCard, style]}>
@@ -33,7 +34,9 @@ const BankAccountCard = ({
         </View>
       </View>
       {showSetaIcon && (
-        <TouchableOpacity style={styles.containerSetaIr}>
+        <TouchableOpacity
+          onPress={onPressSetaIr}
+          style={styles.containerSetaIr}>
           <SvgSeta width={12} height={12} color={'#09498F'} />
         </TouchableOpacity>
       )}
