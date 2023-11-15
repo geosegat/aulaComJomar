@@ -46,7 +46,7 @@ export default BankAccountCard;
 const styles = StyleSheet.create({
   containerCard: {
     padding: 15,
-    elevation: 2,
+    elevation: 1,
     backgroundColor: 'white',
     flexDirection: 'row',
     alignItems: 'center',
