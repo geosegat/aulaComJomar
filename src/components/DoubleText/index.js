@@ -8,7 +8,7 @@ const index = ({label, value}) => {
   return (
     <View>
       <AppText>{label}</AppText>
-      <AppText>{label}</AppText>
+      <AppText>{label && value ? value : label ? label : value}</AppText>
     </View>
   );
 };
