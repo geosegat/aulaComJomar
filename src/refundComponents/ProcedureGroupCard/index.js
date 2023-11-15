@@ -15,9 +15,10 @@ const ProcedureGroupCard = ({
   totalValue,
   attachments,
   quantity,
+  style,
 }) => {
   return (
-    <View style={styles.containerCard}>
+    <View style={[styles.containerCard, style]}>
       <View style={styles.containerFlexRow}>
         <View style={styles.containerText}>
           <AppText size="small" color="#555">
