@@ -13,10 +13,8 @@ const App = () => {
   }
   return (
     <View style={{flex: 1, backgroundColor: '#F6F6F6', padding: 15}}>
-      <View style={{backgroundColor: 'pink'}}>
-        <BankAccountCard
-          onPressDeleteIcon={pressDeleteIcon}
-          onPressEditIcon={pressEditIcon}></BankAccountCard>
+      <View>
+        <BankAccountCard></BankAccountCard>
       </View>
     </View>
   );
