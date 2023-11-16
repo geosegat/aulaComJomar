@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     borderColor: '#CCCCCC',
     borderWidth: 2,
     borderRadius: 50,
-    position: 'absolute',
   },
   containerIconSelect: {
     width: 20,
@@ -44,7 +43,6 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 50,
     padding: 2,
-    position: 'absolute',
   },
   containerInternalIconSelect: {
     backgroundColor: '#09498F',
