@@ -14,11 +14,13 @@ const AppText = ({
     large: 16,
     xlarge: 18,
     xxlarge: 20,
+    xxxlarge: 22,
     huge: 24,
     xhuge: 28,
   };
   const variants = {
     normal: 'normal',
+    medium: '300',
     semiBold: '500',
     bold: '700',
   };
