@@ -16,7 +16,12 @@ const RowItemWithLink = ({
       </View>
       <AppText color="#68B828">{rightLabel ?? 'Aprovado'}</AppText>
       <TouchableOpacity onPress={onPressSetaIr} style={styles.containerSetaIr}>
-        <SvgSeta width={12} height={12} color={'#68B828'} />
+        <SvgSeta
+          width={12}
+          height={12}
+          color={'#68B828'}
+          style={[rightLabelColor]}
+        />
       </TouchableOpacity>
     </View>
   );
