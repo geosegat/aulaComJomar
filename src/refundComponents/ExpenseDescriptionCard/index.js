@@ -79,15 +79,13 @@ const ExpenseDescriptionCard = ({
             </View>
           </View>
         </View>
-        <View style={styles.containerNote}>
-          <AppText style={styles.containerMargin} variant="semiBold">
-            Observações:{' '}
-            <AppText>
-              {note ??
-                'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.'}
+        {note && (
+          <View style={styles.containerNote}>
+            <AppText style={styles.containerMargin} variant="semiBold">
+              Observações: <AppText>{note}</AppText>
             </AppText>
-          </AppText>
-        </View>
+          </View>
+        )}
         <View style={styles.containerAttachementLinkLabel}>
           <View style={styles.contFlex}>
             <AppText color="#888">Anexos</AppText>
@@ -121,8 +119,8 @@ const styles = StyleSheet.create({
   },
   containerMargin: {marginBottom: 10},
   containerDetails: {
-    borderBottomWidth: 0.5,
-    borderColor: '#888',
+    borderBottomWidth: 1,
+    borderColor: 'rgba(136, 136, 136, 0.4)',
     flexDirection: 'row',
     marginBottom: 10,
   },
@@ -130,7 +128,7 @@ const styles = StyleSheet.create({
   contFlexEnd: {alignItems: 'flex-end'},
   containerNote: {
     borderBottomWidth: 1,
-    borderColor: '#888',
+    borderColor: 'rgba(136, 136, 136, 0.4)',
     marginBottom: 10,
   },
   containerAttachementLinkLabel: {flexDirection: 'row', alignItems: 'center'},

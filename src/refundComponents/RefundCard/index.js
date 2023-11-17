@@ -14,10 +14,12 @@ const RefundCard = ({
   releasedValue,
   onPressEditIcon,
   onPressDeleteIcon,
+  statusColor,
+  borderColor,
   style,
 }) => {
   return (
-    <View style={[styles.containerCard, style]}>
+    <View style={[styles.containerCard, {borderColor}, style]}>
       <View style={styles.containerProtocoleButton}>
         <View style={styles.containerProtocolFlex}>
           <AppText size="large" variant="semiBold">
@@ -38,7 +40,7 @@ const RefundCard = ({
           <AppText size="small" color="#555">
             Situação
           </AppText>
-          <AppText color="#888" variant="semiBold">
+          <AppText color={statusColor ?? '#888'} variant="semiBold">
             {status ?? 'Rascunho'}
           </AppText>
         </View>
