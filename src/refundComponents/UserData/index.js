@@ -35,8 +35,10 @@ const styles = StyleSheet.create({
   containerCard: {
     flexDirection: 'row',
     padding: 15,
-    elevation: 1,
     backgroundColor: '#fff',
+    borderTopWidth: 1,
+    borderColor: '#DDD',
+    borderBottomWidth: 1,
   },
   containerInfos: {marginLeft: 15},
   marginTop: {marginTop: 7},
