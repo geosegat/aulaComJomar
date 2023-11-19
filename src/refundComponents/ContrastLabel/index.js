@@ -2,9 +2,9 @@ import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import AppText from '../../components/AppText';
 
-const ContrastLabel = ({label}) => {
+const ContrastLabel = ({label, style}) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, style]}>
       <AppText size="large" variant="semiBold">
         {label ?? 'Victor Hugo Prando da Silva'}
       </AppText>
@@ -15,5 +15,8 @@ const ContrastLabel = ({label}) => {
 export default ContrastLabel;
 
 const styles = StyleSheet.create({
-  container: {backgroundColor: '#eee', padding: 10},
+  container: {
+    backgroundColor: 'rgba(0, 0, 0, 0.1)',
+    padding: 10,
+  },
 });

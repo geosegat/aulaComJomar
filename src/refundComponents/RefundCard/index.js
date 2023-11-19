@@ -17,9 +17,14 @@ const RefundCard = ({
   statusColor,
   borderColor,
   style,
+  disabled,
+  onPressCard,
 }) => {
   return (
-    <View style={[styles.containerCard, {borderColor}, style]}>
+    <TouchableOpacity
+      onPress={onPressCard}
+      disabled={disabled}
+      style={[styles.containerCard, {borderColor}, style]}>
       <View style={styles.containerProtocoleButton}>
         <View style={styles.containerProtocolFlex}>
           <AppText size="large" variant="semiBold">
@@ -65,7 +70,7 @@ const RefundCard = ({
           <AppText>{releasedValue ?? '-'}</AppText>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
