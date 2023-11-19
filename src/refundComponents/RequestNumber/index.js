@@ -16,5 +16,12 @@ const RequestNumber = ({requestNumber, style}) => {
 export default RequestNumber;
 
 const styles = StyleSheet.create({
-  containerCard: {alignItems: 'center', padding: 15, elevation: 1},
+  containerCard: {
+    alignItems: 'center',
+    padding: 15,
+    backgroundColor: '#fff',
+    borderTopWidth: 1,
+    borderColor: '#DDD',
+    borderBottomWidth: 1,
+  },
 });

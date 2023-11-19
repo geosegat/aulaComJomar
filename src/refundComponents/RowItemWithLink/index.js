@@ -8,19 +8,21 @@ const RowItemWithLink = ({
   rightLabel,
   onPressSetaIr,
   rightLabelColor,
+  style,
 }) => {
   return (
-    <View style={styles.containerCard}>
+    <View style={[styles.containerCard, style]}>
       <View style={styles.containerFlex}>
         <AppText>{leftLabel ?? 'Status atual'}</AppText>
       </View>
-      <AppText color="#68B828">{rightLabel ?? 'Aprovado'}</AppText>
-      <TouchableOpacity onPress={onPressSetaIr} style={styles.containerSetaIr}>
+      <TouchableOpacity onPress={onPressSetaIr} style={styles.containerButton}>
+        <AppText color="#68B828">{rightLabel ?? 'Aprovado'}</AppText>
+
         <SvgSeta
           width={12}
           height={12}
           color={'#68B828'}
-          style={[rightLabelColor]}
+          style={[styles.containerSetaIr, rightLabelColor]}
         />
       </TouchableOpacity>
     </View>
@@ -35,8 +37,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 15,
     backgroundColor: '#fff',
-    elevation: 1,
+    borderTopWidth: 1,
+    borderColor: '#DDD',
+    borderBottomWidth: 1,
   },
   containerFlex: {flex: 1},
-  containerSetaIr: {marginLeft: 5, transform: [{rotateZ: '180deg'}]},
+  containerButton: {flexDirection: 'row', alignItems: 'center'},
+  containerSetaIr: {
+    marginLeft: 5,
+    transform: [{rotateZ: '180deg'}],
+  },
 });

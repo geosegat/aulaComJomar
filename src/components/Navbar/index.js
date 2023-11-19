@@ -12,16 +12,20 @@ const Navbar = ({
   label,
   etapaInicio,
   etapaFim,
-  botaoAdd = false,
-  botaoVoltar = true,
+  showHideAdd = false,
+  showHideBack = true,
   style,
+  onPressBotaoAdd,
+  onPressBotaoBack,
 }) => {
   return (
     <View style={[styles.containerStatusBar, style]}>
       <StatusBar backgroundColor={'#09498F'} />
       <View style={{position: 'absolute', left: 5}}>
-        {botaoVoltar && (
-          <TouchableOpacity style={styles.botaoVoltar}>
+        {showHideBack && (
+          <TouchableOpacity
+            onPress={onPressBotaoBack}
+            style={styles.botaoVoltar}>
             <SvgVoltar width={20} height={20} color={'#fff'} />
             <Text style={styles.fontVoltar}>Voltar</Text>
           </TouchableOpacity>
@@ -37,8 +41,8 @@ const Navbar = ({
       </View>
 
       <View style={{position: 'absolute', right: 10}}>
-        {botaoAdd && (
-          <TouchableOpacity style={styles.BotaoAdd}>
+        {showHideAdd && (
+          <TouchableOpacity onPress={onPressBotaoAdd} style={styles.BotaoAdd}>
             <SvgAdd width={28} height={28} color={'#fff'} />
           </TouchableOpacity>
         )}
