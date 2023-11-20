@@ -29,6 +29,7 @@ const Screen68 = () => {
           style={styles.marginTop}
           label={'Assistência farmacêutica'}
         />
+
         <RadioButtonSelect
           disabled
           style={styles.marginTop}

@@ -2,8 +2,6 @@ import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import SvgEdit from './../../../svgs/icon-editar.svg';
 import SvgDelete from './../../../svgs/icon-close.svg';
-
-import App from '../../../App';
 import AppText from '../../components/AppText';
 
 const RefundCard = ({
