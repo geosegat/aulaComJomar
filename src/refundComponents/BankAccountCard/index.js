@@ -1,7 +1,6 @@
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import AppText from '../../components/AppText';
-import App from '../../../App';
 import SvgSeta from './../../../svgs/seta-esquerda.svg';
 
 const BankAccountCard = ({

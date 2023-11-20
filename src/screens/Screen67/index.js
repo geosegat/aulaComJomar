@@ -42,7 +42,8 @@ const Screen67 = () => {
       </View>
 
       <FooterButton
-        showHideButtonOn
+        showHideButtonOn={true}
+        showHideButtonOff={false}
         label={'CONTINUAR'}
         onPressButton={goToScreen68}
       />

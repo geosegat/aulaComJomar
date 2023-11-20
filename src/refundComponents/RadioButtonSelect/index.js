@@ -6,38 +6,22 @@ import AppText from '../../components/AppText';
 const RadioButtonSelect = ({
   label,
   style,
-  onPress,
   onPressText,
   disabled,
-  showHideIconSelect,
+  isSelected,
 }) => {
-  const [isSelected, setIsSelected] = useState(false);
-
-  useEffect(() => {
-    setIsSelected(showHideIconSelect);
-  }, [showHideIconSelect]);
-
-  const handlePress = () => {
-    setIsSelected(!isSelected);
-    onPress();
-  };
-
   return (
-    <View style={[styles.containerRadioSelect, style]}>
+    <TouchableOpacity
+      disabled={disabled}
+      onPress={onPressText}
+      style={[styles.containerRadioSelect, style]}>
       <View style={styles.containerRadioSelect}>
-        <IconSelect
-          onPressIconNoSelect={handlePress}
-          onPressIconSelect={handlePress}
-          isSelected={isSelected}
-        />
-        <TouchableOpacity
-          disabled={disabled}
-          onPress={onPressText}
-          style={styles.containerText}>
+        <IconSelect showHideSelect={isSelected} />
+        <View style={styles.containerText}>
           <AppText size="large">{label ?? 'Texto'}</AppText>
-        </TouchableOpacity>
+        </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

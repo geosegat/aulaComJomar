@@ -10,13 +10,23 @@ import Screen67 from './src/screens/Screen67';
 import Screen68 from './src/screens/Screen68';
 import Screen80 from './src/screens/Screen80';
 import Screen81 from './src/screens/Screen81';
+import AulaComJomar from './src/screens/AulaComJomar';
 
 const Stack = createNativeStackNavigator();
+
+const pressButon = () => {
+  console.log('Botão pressionado!');
+};
 
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Screen56">
+      <Stack.Navigator initialRouteName="AulaComJomar">
+        <Stack.Screen
+          name="AulaComJomar"
+          component={AulaComJomar}
+          options={{headerShown: false}}
+        />
         <Stack.Screen
           name="Screen56"
           component={Screen56}

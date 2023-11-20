@@ -5,7 +5,6 @@ import {useNavigation} from '@react-navigation/native';
 import Navbar from '../../components/Navbar';
 import RefundCard from '../../refundComponents/RefundCard';
 import AppText from '../../components/AppText';
-import Screen60 from '../Screen60';
 
 const Screen56 = () => {
   const navigation = useNavigation();
