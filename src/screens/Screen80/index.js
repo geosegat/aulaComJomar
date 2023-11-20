@@ -29,6 +29,7 @@ const Screen80 = () => {
           label={'Atorvastatina Cálcica'}
         />
         <RadioButtonSelect
+          showHide
           onPressText={goToScreen81}
           style={styles.marginTop}
           label={'Clortalidona'}
