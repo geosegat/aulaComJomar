@@ -1,28 +1,17 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, TouchableOpacity, StyleSheet} from 'react-native';
 
-const IconSelect = ({style, onPressIconSelect, onPressIconNoSelect}) => {
-  const [isSelected, setIsSelected] = useState(false);
-
-  const makeSelection = () => {
-    setIsSelected(!isSelected);
-    if (isSelected) {
-      onPressIconNoSelect && onPressIconNoSelect();
-    } else {
-      onPressIconSelect && onPressIconSelect();
-    }
-  };
-
+const IconSelect = ({style, showHideSelect}) => {
   return (
-    <TouchableOpacity onPress={makeSelection} style={[style]}>
-      {isSelected ? (
+    <View style={[style]}>
+      {showHideSelect ? (
         <View style={styles.containerIconSelect}>
           <View style={styles.containerInternalIconSelect}></View>
         </View>
       ) : (
         <View style={styles.containerIconNoSelect}></View>
       )}
-    </TouchableOpacity>
+    </View>
   );
 };
 
