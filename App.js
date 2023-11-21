@@ -11,6 +11,7 @@ import Screen68 from './src/screens/Screen68';
 import Screen80 from './src/screens/Screen80';
 import Screen81 from './src/screens/Screen81';
 import AulaComJomar from './src/screens/AulaComJomar';
+import Screen64 from './src/screens/Screen64';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,60 +21,61 @@ const pressButon = () => {
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="AulaComJomar">
-        <Stack.Screen
-          name="AulaComJomar"
-          component={AulaComJomar}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Screen56"
-          component={Screen56}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Screen58"
-          component={Screen58}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Screen57"
-          component={Screen57}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Screen60"
-          component={Screen60}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Screen61"
-          component={Screen61}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Screen67"
-          component={Screen67}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Screen68"
-          component={Screen68}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Screen80"
-          component={Screen80}
-          options={{headerShown: false}}
-        />
-        <Stack.Screen
-          name="Screen81"
-          component={Screen81}
-          options={{headerShown: false}}
-        />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Screen64 />
+    // <NavigationContainer>
+    //   <Stack.Navigator initialRouteName="AulaComJomar">
+    //     <Stack.Screen
+    //       name="AulaComJomar"
+    //       component={AulaComJomar}
+    //       options={{headerShown: false}}
+    //     />
+    //     <Stack.Screen
+    //       name="Screen56"
+    //       component={Screen56}
+    //       options={{headerShown: false}}
+    //     />
+    //     <Stack.Screen
+    //       name="Screen58"
+    //       component={Screen58}
+    //       options={{headerShown: false}}
+    //     />
+    //     <Stack.Screen
+    //       name="Screen57"
+    //       component={Screen57}
+    //       options={{headerShown: false}}
+    //     />
+    //     <Stack.Screen
+    //       name="Screen60"
+    //       component={Screen60}ty-
+    //       options={{headerShown: false}}
+    //     />
+    //     <Stack.Screen
+    //       name="Screen61"
+    //       component={Screen61}
+    //       options={{headerShown: false}}
+    //     />
+    //     <Stack.Screen
+    //       name="Screen67"
+    //       component={Screen67}
+    //       options={{headerShown: false}}
+    //     />
+    //     <Stack.Screen
+    //       name="Screen68"
+    //       component={Screen68}
+    //       options={{headerShown: false}}
+    //     />
+    //     <Stack.Screen
+    //       name="Screen80"
+    //       component={Screen80}
+    //       options={{headerShown: false}}
+    //     />
+    //     <Stack.Screen
+    //       name="Screen81"
+    //       component={Screen81}
+    //       options={{headerShown: false}}
+    //     />
+    //   </Stack.Navigator>
+    // </NavigationContainer>
   );
 };
 
