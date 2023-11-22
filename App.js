@@ -12,6 +12,7 @@ import Screen80 from './src/screens/Screen80';
 import Screen81 from './src/screens/Screen81';
 import AulaComJomar from './src/screens/AulaComJomar';
 import Screen64 from './src/screens/Screen64';
+import Screen65 from './src/screens/Screem65';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,7 +22,7 @@ const pressButon = () => {
 
 const App = () => {
   return (
-    <Screen64 />
+    <AulaComJomar />
     // <NavigationContainer>
     //   <Stack.Navigator initialRouteName="AulaComJomar">
     //     <Stack.Screen
