@@ -17,6 +17,7 @@ const AppText = ({
     xxxlarge: 22,
     huge: 24,
     xhuge: 28,
+    super: 50,
   };
   const variants = {
     normal: 'normal',
