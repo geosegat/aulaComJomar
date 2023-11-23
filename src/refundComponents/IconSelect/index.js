@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {View, TouchableOpacity, StyleSheet} from 'react-native';
 
-const IconSelect = ({style, showHideSelect}) => {
+const IconSelect = ({style, showHideSelect, border}) => {
   return (
     <View style={[style]}>
       {showHideSelect ? (
@@ -9,7 +9,7 @@ const IconSelect = ({style, showHideSelect}) => {
           <View style={styles.containerInternalIconSelect}></View>
         </View>
       ) : (
-        <View style={styles.containerIconNoSelect}></View>
+        <View style={[styles.containerIconNoSelect, border]}></View>
       )}
     </View>
   );

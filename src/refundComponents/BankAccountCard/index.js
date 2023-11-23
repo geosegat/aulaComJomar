@@ -2,6 +2,7 @@ import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import AppText from '../../components/AppText';
 import SvgSeta from './../../../svgs/seta-esquerda.svg';
+import SvgEdit from './../../../svgs/icon-editar.svg';
 
 const BankAccountCard = ({
   bankName,
@@ -10,12 +11,23 @@ const BankAccountCard = ({
   bankAccount,
   style,
   showSetaIcon = false,
+  showSetaEdit = false,
   onPressSetaIr,
+  disabled,
 }) => {
   return (
-    <View style={[styles.containerCard, style]}>
+    <TouchableOpacity disabled={disabled} style={[styles.containerCard, style]}>
       <View style={styles.containerTexts}>
-        <AppText variant="semiBold">{bankName ?? 'Banco do Brasil SA'}</AppText>
+        <View style={styles.containerRow}>
+          <AppText variant="semiBold" style={styles.containerTexts}>
+            {bankName ?? 'Banco do Brasil SA'}
+          </AppText>
+          {showSetaEdit && (
+            <TouchableOpacity>
+              <SvgEdit />
+            </TouchableOpacity>
+          )}
+        </View>
         <View style={styles.containerBankNameMargin}>
           <AppText size="small" color="#555">
             {userName ?? 'Victor Hugo Prando da Silva'}
@@ -33,13 +45,11 @@ const BankAccountCard = ({
         </View>
       </View>
       {showSetaIcon && (
-        <TouchableOpacity
-          onPress={onPressSetaIr}
-          style={styles.containerSetaIr}>
+        <View onPress={onPressSetaIr} style={styles.containerSetaIr}>
           <SvgSeta width={12} height={12} color={'#09498F'} />
-        </TouchableOpacity>
+        </View>
       )}
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -48,11 +58,11 @@ export default BankAccountCard;
 const styles = StyleSheet.create({
   containerCard: {
     padding: 15,
-    elevation: 1,
     backgroundColor: 'white',
     flexDirection: 'row',
     alignItems: 'center',
   },
+  containerRow: {flexDirection: 'row'},
   containerTexts: {flex: 1},
   containerBankNameMargin: {marginTop: 2},
   containerBankBranchAccount: {flexDirection: 'row', marginTop: 2},
