@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+<<<<<<< HEAD
 import Screen56 from './src/screens/Screen56';
 import Screen58 from './src/screens/Screen58';
 import Screen57 from './src/screens/Screen57';
@@ -13,6 +14,10 @@ import Screen81 from './src/screens/Screen81';
 import AulaComJomar from './src/screens/AulaComJomar';
 import Screen64 from './src/screens/Screen64';
 import Screen65 from './src/screens/Screem65';
+=======
+import TelaInicio from './src/screens/AulaComJomar/TelaInicio';
+import Contador from './src/screens/AulaComJomar/Contador';
+>>>>>>> develop
 
 const Stack = createNativeStackNavigator();
 
@@ -22,6 +27,7 @@ const pressButon = () => {
 
 const App = () => {
   return (
+<<<<<<< HEAD
     <AulaComJomar />
     // <NavigationContainer>
     //   <Stack.Navigator initialRouteName="AulaComJomar">
@@ -77,6 +83,15 @@ const App = () => {
     //     />
     //   </Stack.Navigator>
     // </NavigationContainer>
+=======
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{headerStyle: {backgroundColor: '#547789'}}}>
+        <Stack.Screen name="Inicio" component={TelaInicio} />
+        <Stack.Screen name="Contador" component={Contador} />
+      </Stack.Navigator>
+    </NavigationContainer>
+>>>>>>> develop
   );
 };
 
