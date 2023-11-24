@@ -33,7 +33,6 @@ const CurrencyConverter = () => {
           <Image width={45} height={45} source={{uri: imageDogeCoin}} />
         </TouchableOpacity>
       </View>
-      <TextInput></TextInput>
     </View>
   );
 };
