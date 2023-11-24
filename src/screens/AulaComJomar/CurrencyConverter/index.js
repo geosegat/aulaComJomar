@@ -32,6 +32,9 @@ const CurrencyConverter = () => {
         <TouchableOpacity style={styles.marginImg}>
           <Image width={45} height={45} source={{uri: imageDogeCoin}} />
         </TouchableOpacity>
+        <TouchableOpacity style={styles.marginImg}>
+          <Image width={45} height={45} source={{uri: imageDogeCoin}} />
+        </TouchableOpacity>
       </View>
     </View>
   );
