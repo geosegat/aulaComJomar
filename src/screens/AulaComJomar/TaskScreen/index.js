@@ -68,7 +68,7 @@ const TaskScreen = () => {
           onPress={() => {
             updateIsSelect(e);
           }}
-          textColor={showHideSelect ? '#E6E6E46f' : '#fff'}
+          textColor={e.isSelect ? '#E6E6E46f' : '#fff'}
         />
       ))}
     </View>
