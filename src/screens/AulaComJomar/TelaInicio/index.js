@@ -13,6 +13,9 @@ const TelaInicio = () => {
   const goTaskScreen = () => {
     navigation.navigate('TaskScreen');
   };
+  const goToMnyConv = () => {
+    navigation.navigate('CurrencyConverter');
+  };
 
   return (
     <View style={styles.container}>
@@ -35,6 +38,11 @@ const TelaInicio = () => {
       <TouchableOpacity style={styles.buttonContador} onPress={goTaskScreen}>
         <AppText size="xxlarge" variant="bold" color="#fff">
           Task List
+        </AppText>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.buttonContador} onPress={goToMnyConv}>
+        <AppText size="xxlarge" variant="bold" color="#fff">
+          MnyConv
         </AppText>
       </TouchableOpacity>
     </View>
