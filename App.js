@@ -16,7 +16,13 @@ import Screen64 from './src/screens/Screen64';
 import Screen65 from './src/screens/Screem65';
 =======
 import TelaInicio from './src/screens/AulaComJomar/TelaInicio';
+<<<<<<< HEAD
 import Contador from './src/screens/AulaComJomar/Contador';
+>>>>>>> develop
+=======
+import Contador from './src/screens/AulaComJomar/Counter';
+import TaskScreen from './src/screens/AulaComJomar/TaskScreen';
+import CurrencyConverter from './src/screens/AulaComJomar/CurrencyConverter';
 >>>>>>> develop
 
 const Stack = createNativeStackNavigator();
@@ -89,6 +95,10 @@ const App = () => {
         screenOptions={{headerStyle: {backgroundColor: '#547789'}}}>
         <Stack.Screen name="Inicio" component={TelaInicio} />
         <Stack.Screen name="Contador" component={Contador} />
+        <Stack.Screen name="TaskScreen" component={TaskScreen}></Stack.Screen>
+        <Stack.Screen
+          name="CurrencyConverter"
+          component={CurrencyConverter}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
 >>>>>>> develop

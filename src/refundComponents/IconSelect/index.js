@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {View, TouchableOpacity, StyleSheet} from 'react-native';
 
-const IconSelect = ({style, showHideSelect, border}) => {
+const IconSelect = ({style, showHideSelect, border, onPress}) => {
   return (
-    <View style={[style]}>
+    <TouchableOpacity style={[style]} onPress={onPress}>
       {showHideSelect ? (
         <View style={styles.containerIconSelect}>
           <View style={styles.containerInternalIconSelect}></View>
@@ -11,7 +11,7 @@ const IconSelect = ({style, showHideSelect, border}) => {
       ) : (
         <View style={[styles.containerIconNoSelect, border]}></View>
       )}
-    </View>
+    </TouchableOpacity>
   );
 };
 
@@ -19,22 +19,22 @@ export default IconSelect;
 
 const styles = StyleSheet.create({
   containerIconNoSelect: {
-    width: 20,
-    height: 20,
+    width: 25,
+    height: 25,
     borderColor: '#CCCCCC',
     borderWidth: 2,
     borderRadius: 50,
   },
   containerIconSelect: {
-    width: 20,
-    height: 20,
-    borderColor: '#09498F',
+    width: 25,
+    height: 25,
+    borderColor: '#547789',
     borderWidth: 2,
     borderRadius: 50,
     padding: 2,
   },
   containerInternalIconSelect: {
-    backgroundColor: '#09498F',
+    backgroundColor: '#547789',
     flex: 1,
     borderRadius: 50,
   },

@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {View, Text, Button, StyleSheet, TouchableOpacity} from 'react-native';
 import AppText from '../../../components/AppText';
-import App from '../../../../App';
 
 const Contador = () => {
   const [contador, setContador] = useState(0);
@@ -35,9 +34,11 @@ const Contador = () => {
       <View style={styles.caixaHeight} />
 
       <View style={styles.botoesContainer}>
-        <TouchableOpacity style={styles.containerButton} onPress={addContador}>
+        <TouchableOpacity
+          style={styles.containerButton}
+          onPress={diminuirContador}>
           <AppText size="huge" color="#fff">
-            +
+            -
           </AppText>
         </TouchableOpacity>
         <TouchableOpacity
@@ -49,9 +50,9 @@ const Contador = () => {
         </TouchableOpacity>
         <TouchableOpacity
           style={[styles.containerButton, styles.marginLeft]}
-          onPress={diminuirContador}>
+          onPress={addContador}>
           <AppText size="huge" color="#fff">
-            -
+            +
           </AppText>
         </TouchableOpacity>
       </View>

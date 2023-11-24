@@ -10,13 +10,19 @@ const TelaInicio = () => {
   const goContador = () => {
     navigation.navigate('Contador');
   };
+  const goTaskScreen = () => {
+    navigation.navigate('TaskScreen');
+  };
+  const goToMnyConv = () => {
+    navigation.navigate('CurrencyConverter');
+  };
 
   return (
     <View style={styles.container}>
       <View style={styles.caixaHeight} />
       <View style={styles.containerHeader}>
         <AppText size="huge" variant="bold" color="#fff">
-          App em construção...
+          App under construction...
         </AppText>
         <View style={styles.containerImg}>
           <SvgConstruindo width={30} height={30} color={'#2491C9'} />
@@ -26,7 +32,17 @@ const TelaInicio = () => {
 
       <TouchableOpacity style={styles.buttonContador} onPress={goContador}>
         <AppText size="xxlarge" variant="bold" color="#fff">
-          Contador
+          Counter
+        </AppText>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.buttonContador} onPress={goTaskScreen}>
+        <AppText size="xxlarge" variant="bold" color="#fff">
+          Task List
+        </AppText>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.buttonContador} onPress={goToMnyConv}>
+        <AppText size="xxlarge" variant="bold" color="#fff">
+          MnyConv
         </AppText>
       </TouchableOpacity>
     </View>
@@ -48,5 +64,7 @@ const styles = StyleSheet.create({
     padding: 15,
     borderRadius: 6,
     alignItems: 'center',
+    marginBottom: 20,
+    width: 125,
   },
 });
