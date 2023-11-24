@@ -97,7 +97,7 @@ const App = () => {
         <Stack.Screen name="Contador" component={Contador} />
         <Stack.Screen name="TaskScreen" component={TaskScreen}></Stack.Screen>
         <Stack.Screen
-          name="CurrencyConverter"
+          name="CurrencyConverterr"
           component={CurrencyConverter}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
