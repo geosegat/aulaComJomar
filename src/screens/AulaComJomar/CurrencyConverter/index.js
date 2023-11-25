@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Image,
   TouchableOpacity,
+  TextInput,
 } from 'react-native';
 
 const CurrencyConverter = () => {
@@ -36,6 +37,7 @@ const CurrencyConverter = () => {
           <Image width={45} height={45} source={{uri: imageDogeCoin}} />
         </TouchableOpacity>
       </View>
+      <TextInput placeholder="0" placeholderTextColor={'#fff'}></TextInput>
     </View>
   );
 };
