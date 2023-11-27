@@ -9,7 +9,7 @@ import CurrencyConverter from './src/screens/AulaComJomar/CurrencyConverter';
 const Stack = createNativeStackNavigator();
 
 const pressButon = () => {
-  console.log(' !');
+  console.log('Botão pressionado!');
 };
 
 const App = () => {
