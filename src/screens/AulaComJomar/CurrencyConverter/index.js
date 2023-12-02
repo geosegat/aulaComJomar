@@ -113,6 +113,7 @@ const CurrencyConverter = () => {
   };
 
   const handleCurrencyPress = currency => {
+    console.log(getResultMessage());
     setSelectedCurrency(currency);
   };
 
@@ -154,8 +155,8 @@ const CurrencyConverter = () => {
     <TouchableOpacity
       style={styles.marginImg}
       onPress={() => {
-        console.log('fui');
-        handleCurrencyPress(item);
+        console.log(item);
+        handleCurrencyPress();
       }}>
       <Image width={45} height={45} source={{uri: item.image}} />
     </TouchableOpacity>
