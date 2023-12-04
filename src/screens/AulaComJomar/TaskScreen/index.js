@@ -100,3 +100,90 @@ const styles = StyleSheet.create({
   caixaHeight: {height: 50},
   todoCard: {marginBottom: 10},
 });
+
+const currencies = [
+  {
+    moeda: 'Ark',
+    moedaP: 'Arks',
+    valor: 5.2,
+    image: 'https://dolarhoje.com/img/icon-ark.png',
+  },
+  {
+    moeda: 'Binancecoin',
+    moedaP: 'Binancecoins',
+    valor: 1119.34,
+    image: 'https://dolarhoje.com/img/icon-binance-coin.png',
+  },
+  {
+    moeda: 'Iota',
+    moedaP: 'Iotas',
+    valor: 1.12,
+    image: 'https://dolarhoje.com/img/icon-iota.png',
+  },
+  {
+    moeda: 'Litecoin',
+    moedaP: 'Litecoins',
+    valor: 343.93,
+    image: 'https://dolarhoje.com/img/icon-litecoin.gif',
+  },
+  {
+    moeda: 'Xem',
+    moedaP: 'Xems',
+    valor: 0.17,
+    image: 'https://dolarhoje.com/img/icon-nem.png',
+  },
+  {
+    moeda: 'Xrp',
+    moedaP: 'Xrps',
+    valor: 3,
+    image: 'https://dolarhoje.com/img/icon-xrp.png',
+  },
+  {
+    moeda: 'Salt',
+    moedaP: 'Salts',
+    valor: 0.18,
+    image: 'https://dolarhoje.com/img/icon-salt.png',
+  },
+  {
+    moeda: 'Shiba',
+    moedaP: 'Shibas',
+    valor: 0.000041,
+    image: 'https://dolarhoje.com/img/icon-shiba-inu.png',
+  },
+  {
+    moeda: 'Tron',
+    moedaP: 'Trons',
+    valor: 0.5,
+    image: 'https://dolarhoje.com/img/icon-tron.png',
+  },
+  {
+    moeda: 'Bitcoin',
+    moedaP: 'Bitcoins',
+    valor: 186203,
+    image: 'https://dolarhoje.com/img/icon-bitcoin.gif',
+  },
+  {
+    moeda: 'Dolar',
+    moedaP: 'Dolares',
+    valor: 4.9,
+    image: 'https://dolarhoje.com/img/icon-dolar.gif',
+  },
+  {
+    moeda: 'Euro',
+    moedaP: 'Euros',
+    valor: 5.36,
+    image: 'https://dolarhoje.com/img/icon-euro.gif',
+  },
+  {
+    moeda: 'Libra',
+    moedaP: 'Libras',
+    valor: 6.17,
+    image: 'https://dolarhoje.com/img/icon-libra.gif',
+  },
+  {
+    moeda: 'Dogecoin',
+    moedaP: 'Dogecoins',
+    valor: 0.38,
+    image: 'https://dolarhoje.com/img/icon-dogecoin.png',
+  },
+];
