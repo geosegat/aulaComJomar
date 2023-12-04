@@ -96,68 +96,42 @@ const currencies = [
   },
 ];
 
+const initialMessage = 'Digite um valor e selecione a meda desejada';
+
 const CurrencyConverter = () => {
-  const [text, setText] = useState('');
-  const [selectedCurrency, setSelectedCurrency] = useState(null);
-  const [result, setResult] = useState(null);
-  const [filteredCurrencies, setFilteredCurrencies] = useState([]);
-  const [resultValue, setResultValue] = useState('');
+  const [currencyInput, setCurrencyInput] = useState('');
+  const [message, setMessage] = useState(initialMessage);
+  const [seachInput, setSearchInput] = useState('');
 
-  const handleTextChange = newText => {
-    setText(newText);
+  const filteredCurrencyList = currencies.filter(c =>
+    c.moeda.toLowerCase().includes(seachInput),
+  );
 
-    const filtered = currencies.filter(currency =>
-      currency.moeda.toLowerCase().includes(newText.toLowerCase()),
-    );
-    setFilteredCurrencies(filtered);
-  };
+  const onPressCurrency = item => {
+    const value = parseInt(currencyInput, 10) * item.valor;
 
-  const handleCurrencyPress = currency => {
-    console.log(getResultMessage());
-    setSelectedCurrency(currency);
-  };
-
-  const calculateResult = () => {
-    if (text !== '' && selectedCurrency !== null) {
-      const calculatedResult = parseFloat(text) * selectedCurrency.valor;
-      setResult(prevResult => ({
-        value: calculatedResult.toFixed(5),
-        currencySing: selectedCurrency.moeda,
-        currencyPlu: selectedCurrency.moedaP,
-      }));
-      setResultValue(calculatedResult.toFixed(5));
-    } else {
-      setResult(null);
-      setResultValue('');
+    if (currencyInput > 1) {
+      setMessage(`${currencyInput} ${item.moedaP} valem R$${value.toFixed(2)}`);
+    } else if (currencyInput == 1) {
+      setMessage(`${currencyInput} ${item.moeda} vale R$${value.toFixed(2)}`);
+    } else if (currencyInput === '') {
+      setMessage(initialMessage);
+      return;
     }
   };
 
-  useEffect(() => {
-    calculateResult();
-  }, [text, selectedCurrency]);
-
-  const handleResultChange = newValue => {
-    setResultValue(newValue);
+  const onChangeTextSearchInput = e => {
+    setSearchInput(e.toLowerCase());
   };
 
-  const getResultMessage = () => {
-    if (result !== null && text !== '') {
-      if (text > 1) {
-        return `${text} ${result.currencyPlu} valem R$ ${result.value}`;
-      } else if (text == 1) {
-        return `${text} ${result.currencySing} vale R$ ${result.value}`;
-      }
-    }
-    return 'Digite um valor e selecione a moeda desejada.';
+  const onChangeTextCurrencyInput = e => {
+    setCurrencyInput(e.replace(/[^0-9.]/g, ''));
   };
 
   const renderItem = ({item}) => (
     <TouchableOpacity
       style={styles.marginImg}
-      onPress={() => {
-        console.log(item);
-        handleCurrencyPress();
-      }}>
+      onPress={() => onPressCurrency(item)}>
       <Image width={45} height={45} source={{uri: item.image}} />
     </TouchableOpacity>
   );
@@ -170,11 +144,11 @@ const CurrencyConverter = () => {
           style={styles.searchInput}
           placeholder="Pesquisar moeda"
           placeholderTextColor={'#fff'}
-          onChangeText={handleTextChange}
-          value={text}
+          onChangeText={onChangeTextSearchInput}
+          value={seachInput}
         />
         <FlatList
-          data={filteredCurrencies.length > 0 ? filteredCurrencies : currencies}
+          data={filteredCurrencyList}
           renderItem={renderItem}
           horizontal
           showsHorizontalScrollIndicator={false}
@@ -186,10 +160,10 @@ const CurrencyConverter = () => {
           placeholder="0"
           keyboardType="numeric"
           placeholderTextColor="#E6E6E46f"
-          value={resultValue}
-          onChangeText={handleResultChange}
+          onChangeText={onChangeTextCurrencyInput}
+          value={currencyInput}
         />
-        <Text style={styles.resultText}>{getResultMessage()}</Text>
+        <Text style={styles.resultText}>{message}</Text>
       </View>
     </View>
   );
