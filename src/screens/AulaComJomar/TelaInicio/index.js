@@ -3,6 +3,7 @@ import React from 'react';
 import SvgConstruindo from './../../../../svgs/trabalhando.svg';
 import AppText from '../../../components/AppText';
 import {useNavigation} from '@react-navigation/native';
+import AuthenticationField from '../AuthenticationField';
 
 const TelaInicio = () => {
   const navigation = useNavigation();
@@ -15,6 +16,9 @@ const TelaInicio = () => {
   };
   const goToMnyConv = () => {
     navigation.navigate('CurrencyConverter');
+  };
+  const goAuthenticationField = () => {
+    navigation.navigate('AuthenticationField');
   };
 
   return (
@@ -43,6 +47,13 @@ const TelaInicio = () => {
       <TouchableOpacity style={styles.buttonContador} onPress={goToMnyConv}>
         <AppText size="xxlarge" variant="bold" color="#fff">
           MnyConv
+        </AppText>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.buttonContador}
+        onPress={goAuthenticationField}>
+        <AppText size="xxlarge" variant="bold" color="#fff">
+          CredentialField
         </AppText>
       </TouchableOpacity>
     </View>
