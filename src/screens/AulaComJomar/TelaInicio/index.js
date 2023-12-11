@@ -3,7 +3,6 @@ import React from 'react';
 import SvgConstruindo from './../../../../svgs/trabalhando.svg';
 import AppText from '../../../components/AppText';
 import {useNavigation} from '@react-navigation/native';
-import AuthenticationField from '../AuthenticationField';
 
 const TelaInicio = () => {
   const navigation = useNavigation();
@@ -19,6 +18,9 @@ const TelaInicio = () => {
   };
   const goAuthenticationField = () => {
     navigation.navigate('AuthenticationField');
+  };
+  const goCepResultsScreen = () => {
+    navigation.navigate('CepResultsScreen');
   };
 
   return (
@@ -54,6 +56,13 @@ const TelaInicio = () => {
         onPress={goAuthenticationField}>
         <AppText size="xxlarge" variant="bold" color="#fff">
           CredentialField
+        </AppText>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.buttonContador}
+        onPress={goCepResultsScreen}>
+        <AppText size="xxlarge" variant="bold" color="#fff">
+          CepResult
         </AppText>
       </TouchableOpacity>
     </View>
