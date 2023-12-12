@@ -1,8 +1,8 @@
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
-import IconSelect from '../../../refundComponents/IconSelect';
-import AppText from '../../../components/AppText';
-import SvgDelete from '../../../../svgs/lixeira-de-reciclagem.svg';
+import IconSelect from './../../../../refundComponents/IconSelect';
+import AppText from '../../../../components/AppText';
+import SvgDelete from '../../../../../svgs/lixeira-de-reciclagem.svg';
 
 const TodoCard = ({
   label,
