@@ -7,6 +7,7 @@ import TaskScreen from './src/screens/AulaComJomar/TaskScreen';
 import CurrencyConverter from './src/screens/AulaComJomar/CurrencyConverter';
 import AuthenticationField from './src/screens/AulaComJomar/AuthenticationField';
 import CepResultsScreen from './src/screens/AulaComJomar/CepResultsScreen';
+import VirtualCardGenerator from './src/screens/AulaComJomar/VirtualCardGenerator';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,9 @@ const App = () => {
         <Stack.Screen
           name="CepResultsScreen"
           component={CepResultsScreen}></Stack.Screen>
+        <Stack.Screen
+          name="VirtualCardGenerator"
+          component={VirtualCardGenerator}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );
