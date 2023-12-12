@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import SvgFicheiro from '../../../../svgs/adicionar-ficheiro.svg';
-import TodoCard from '../TodoCard';
+import TodoCard from '../componentes/TodoCard';
 
 const TaskScreen = () => {
   let text = 'Adicione uma nova tarefa';
