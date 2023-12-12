@@ -23,6 +23,10 @@ const TelaInicio = () => {
     navigation.navigate('CepResultsScreen');
   };
 
+  const goVirtualCardGenerator = () => {
+    navigation.navigate('VirtualCardGenerator');
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.caixaHeight} />
@@ -55,7 +59,7 @@ const TelaInicio = () => {
         style={styles.buttonContador}
         onPress={goAuthenticationField}>
         <AppText size="xxlarge" variant="bold" color="#fff">
-          CredentialField
+          Credential Field
         </AppText>
       </TouchableOpacity>
       <TouchableOpacity
@@ -63,6 +67,13 @@ const TelaInicio = () => {
         onPress={goCepResultsScreen}>
         <AppText size="xxlarge" variant="bold" color="#fff">
           CepResult
+        </AppText>
+      </TouchableOpacity>
+      <TouchableOpacity
+        style={styles.buttonContador}
+        onPress={goVirtualCardGenerator}>
+        <AppText size="xxlarge" variant="bold" color="#fff">
+          Virtual Card Generator
         </AppText>
       </TouchableOpacity>
     </View>
