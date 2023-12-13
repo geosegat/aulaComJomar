@@ -16,7 +16,6 @@ import SvgLixeira from './../../../../svgs/lixeira-de-reciclagem.svg';
 const faker = require('faker');
 
 const VirtualCardGenerator = style => {
-  const cores = ['#547789'];
   const [nomeTitular, setNomeTitular] = useState('Mc Cabelinho');
   const [colorCard, setColorCard] = useState('#547789');
   const [colorTextCard, setColorTextCard] = useState('#547789');
