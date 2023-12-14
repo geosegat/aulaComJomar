@@ -1,4 +1,10 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import React from 'react';
 import SvgConstruindo from './../../../../svgs/trabalhando.svg';
 import AppText from '../../../components/AppText';
@@ -26,6 +32,9 @@ const TelaInicio = () => {
   const goVirtualCardGenerator = () => {
     navigation.navigate('VirtualCardGenerator');
   };
+  const goDDDetect = () => {
+    navigation.navigate('DDDetect');
+  };
 
   return (
     <View style={styles.container}>
@@ -39,43 +48,49 @@ const TelaInicio = () => {
         </View>
       </View>
       <View style={styles.caixaHeight} />
-
-      <TouchableOpacity style={styles.buttonContador} onPress={goContador}>
-        <AppText size="xxlarge" variant="bold" color="#fff">
-          Counter
-        </AppText>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.buttonContador} onPress={goTaskScreen}>
-        <AppText size="xxlarge" variant="bold" color="#fff">
-          Task List
-        </AppText>
-      </TouchableOpacity>
-      <TouchableOpacity style={styles.buttonContador} onPress={goToMnyConv}>
-        <AppText size="xxlarge" variant="bold" color="#fff">
-          MnyConv
-        </AppText>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.buttonContador}
-        onPress={goAuthenticationField}>
-        <AppText size="xxlarge" variant="bold" color="#fff">
-          Credential Field
-        </AppText>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.buttonContador}
-        onPress={goCepResultsScreen}>
-        <AppText size="xxlarge" variant="bold" color="#fff">
-          CepResult
-        </AppText>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.buttonContador}
-        onPress={goVirtualCardGenerator}>
-        <AppText size="xxlarge" variant="bold" color="#fff">
-          Virtual Card Generator
-        </AppText>
-      </TouchableOpacity>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <TouchableOpacity style={styles.buttonContador} onPress={goContador}>
+          <AppText size="xxlarge" variant="bold" color="#fff">
+            Counter
+          </AppText>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.buttonContador} onPress={goTaskScreen}>
+          <AppText size="xxlarge" variant="bold" color="#fff">
+            Task List
+          </AppText>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.buttonContador} onPress={goToMnyConv}>
+          <AppText size="xxlarge" variant="bold" color="#fff">
+            MnyConv
+          </AppText>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.buttonContador}
+          onPress={goAuthenticationField}>
+          <AppText size="xxlarge" variant="bold" color="#fff">
+            Credential Field
+          </AppText>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.buttonContador}
+          onPress={goCepResultsScreen}>
+          <AppText size="xxlarge" variant="bold" color="#fff">
+            CepResult
+          </AppText>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.buttonContador}
+          onPress={goVirtualCardGenerator}>
+          <AppText size="xxlarge" variant="bold" color="#fff">
+            Virtual Card Generator
+          </AppText>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.buttonContador} onPress={goDDDetect}>
+          <AppText size="xxlarge" variant="bold" color="#fff">
+            DDDetect
+          </AppText>
+        </TouchableOpacity>
+      </ScrollView>
     </View>
   );
 };
