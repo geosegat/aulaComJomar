@@ -16,6 +16,12 @@ const DDDetect = () => {
     [7, 8, 9],
     ['.', 0, ','],
   ];
+  const numericButtonsLayout2 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    ['.', 0, ','],
+  ];
 
   const renderNumericButton = number => (
     <TouchableOpacity key={number} style={styles.containerNumeric}>
