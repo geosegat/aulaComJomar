@@ -20,21 +20,43 @@ const AuthenticationField = () => {
     return emailRegex.test(inputText);
   };
 
-  const onPress = () => {
+  const onPress = async () => {
     if (email.trim() === '') {
       Alert.alert('Por favor, digite um E-mail!');
       setvalidationColor('gray');
       setvalidationMessage('Digite seu e-mail');
-      console.log('entrei aqui');
       return;
     }
     const isEmailValid = validateEmail(email);
-
     if (isEmailValid) {
-      setvalidationMessage('E-mail válido');
-      setvalidationColor('green');
+      try {
+        console.log('Enviando dados para a API:', {email, password});
+        const response = await fetch(
+          'https://apiapp.youcom.com.br/v2/account/login',
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              Key: email,
+              Password: password,
+            }),
+          },
+        );
+        const result = await response.json();
+
+        if (response.ok) {
+          setvalidationMessage('Login bem sucedido');
+          setvalidationColor('green');
+        } else {
+          setvalidationMessage('Credenciais inválidas');
+          setvalidationColor('red');
+        }
+      } catch (error) {
+        console.error('Erro ao fazer a chamada à API:', error);
+      }
     } else {
-      console.log('agora entrei aqui tbm');
       setvalidationMessage('E-mail inválido');
       setvalidationColor('red');
     }
