@@ -6,7 +6,7 @@ import InitialScreen from './src/Screens/InitialScreen';
 const Stack = createNativeStackNavigator();
 
 const pressButon = () => {
-  console.log('Botão press');
+  console.log('');
 };
 
 const App = () => {
