@@ -1,9 +1,9 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Navbar from '../../components/Navbar';
-import DashedButton from '../../refundComponents/DashedButton';
-import AppText from '../../components/AppText';
-import FooterButton from '../../refundComponents/FooterButton';
+import Navbar from '../../../components/Navbar';
+import DashedButton from '../../../refundComponents/DashedButton';
+import AppText from '../../../components/AppText';
+import FooterButton from '../../../refundComponents/FooterButton';
 import {useNavigation} from '@react-navigation/native';
 
 const Screen61 = () => {

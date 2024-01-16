@@ -1,57 +1,52 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Navbar from '../../components/Navbar';
+import Navbar from '../../../components/Navbar';
 import {useNavigation} from '@react-navigation/native';
-import ContrastLabel from '../../refundComponents/ContrastLabel';
-import RadioButtonSelect from '../../refundComponents/RadioButtonSelect';
-import FooterButton from '../../refundComponents/FooterButton';
+import ContrastLabel from '../../../refundComponents/ContrastLabel';
+import RadioButtonSelect from '../../../refundComponents/RadioButtonSelect';
+import FooterButton from '../../../refundComponents/FooterButton';
 
-const Screen67 = () => {
+const Screen68 = () => {
   const navigation = useNavigation();
 
-  const goToScreen61 = () => {
-    navigation.navigate('Screen61');
+  const goToScreen67 = () => {
+    navigation.navigate('Screen67');
   };
-  const goToScreen68 = () => {
-    navigation.navigate('Screen68');
+  const goToScreen80 = () => {
+    navigation.navigate('Screen80');
   };
 
   return (
     <View style={styles.container}>
-      <Navbar onPressBotaoBack={goToScreen61} label={'Adicionar despesa'} />
+      <Navbar onPressBotaoBack={goToScreen67} label={'Adicionar despesa'} />
       <ContrastLabel
         style={styles.containerContrastLabel}
-        label={'De quem é a despesa?'}
+        label={'Qual o tipo de reembolso?'}
       />
       <View style={styles.containerRadioButton}>
         <RadioButtonSelect
           disabled
           style={styles.marginTop}
-          label={'Victor Hugo Prando da Silva'}
+          label={'Assistência farmacêutica'}
         />
+
         <RadioButtonSelect
           disabled
           style={styles.marginTop}
-          label={'Paulo Estofel'}
-        />
-        <RadioButtonSelect
-          disabled
-          style={styles.marginTop}
-          label={'Rafael Antonio Pereira'}
+          label={'Demais solicitações'}
         />
       </View>
 
       <FooterButton
-        showHideButtonOn={true}
-        showHideButtonOff={false}
+        showHideButtonOn
         label={'CONTINUAR'}
-        onPressButton={goToScreen68}
+        onPressButton={goToScreen80}
       />
     </View>
   );
 };
 
-export default Screen67;
+export default Screen68;
 
 const styles = StyleSheet.create({
   container: {flex: 1, backgroundColor: 'rgba(255, 255, 255, 1)'},
