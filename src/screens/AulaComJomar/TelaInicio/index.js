@@ -35,6 +35,9 @@ const TelaInicio = () => {
   const goDDDetect = () => {
     navigation.navigate('DDDetect');
   };
+  const goQuiz = () => {
+    navigation.navigate('Quiz');
+  };
 
   return (
     <View style={styles.container}>
@@ -88,6 +91,11 @@ const TelaInicio = () => {
         <TouchableOpacity style={styles.buttonContador} onPress={goDDDetect}>
           <AppText size="xxlarge" variant="bold" color="#fff">
             DDDetect
+          </AppText>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.buttonContador} onPress={goQuiz}>
+          <AppText size="xxlarge" variant="bold" color="#fff">
+            Quiz
           </AppText>
         </TouchableOpacity>
       </ScrollView>
