@@ -9,6 +9,7 @@ import AuthenticationField from './src/screens/AulaComJomar/AuthenticationField'
 import CepResultsScreen from './src/screens/AulaComJomar/CepResultsScreen';
 import VirtualCardGenerator from './src/screens/AulaComJomar/VirtualCardGenerator';
 import DDDetect from './src/screens/AulaComJomar/DDDetect';
+import Quiz from './src/screens/AulaComJomar/Quiz';
 
 const Stack = createNativeStackNavigator();
 
@@ -37,6 +38,7 @@ const App = () => {
           name="VirtualCardGenerator"
           component={VirtualCardGenerator}></Stack.Screen>
         <Stack.Screen name="DDDetect" component={DDDetect}></Stack.Screen>
+        <Stack.Screen name="Quiz" component={Quiz}></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );
