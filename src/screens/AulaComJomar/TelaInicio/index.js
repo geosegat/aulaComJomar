@@ -1,10 +1,4 @@
-import {
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {ScrollView, StyleSheet, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import SvgConstruindo from './../../../../svgs/trabalhando.svg';
 import AppText from '../../../components/AppText';
@@ -34,6 +28,9 @@ const TelaInicio = () => {
   };
   const goDDDetect = () => {
     navigation.navigate('DDDetect');
+  };
+  const goQuiz = () => {
+    navigation.navigate('Quiz');
   };
 
   return (
@@ -88,6 +85,11 @@ const TelaInicio = () => {
         <TouchableOpacity style={styles.buttonContador} onPress={goDDDetect}>
           <AppText size="xxlarge" variant="bold" color="#fff">
             DDDetect
+          </AppText>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.buttonContador} onPress={goQuiz}>
+          <AppText size="xxlarge" variant="bold" color="#fff">
+            Quiz
           </AppText>
         </TouchableOpacity>
       </ScrollView>

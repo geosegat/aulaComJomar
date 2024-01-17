@@ -1,12 +1,12 @@
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import ExpenseCard from '../../refundComponents/ExpenseCard';
-import Navbar from '../../components/Navbar';
-import AppText from '../../components/AppText';
-import BankAccountCard from '../../refundComponents/BankAccountCard';
-import FooterButton from '../../refundComponents/FooterButton';
-import CheckTerms from '../../refundComponents/CheckTerms';
-import ExpenseDescriptionCard from '../../refundComponents/ExpenseDescriptionCard';
+import ExpenseCard from '../../../refundComponents/ExpenseCard';
+import Navbar from '../../../components/Navbar';
+import AppText from '../../../components/AppText';
+import BankAccountCard from '../../../refundComponents/BankAccountCard';
+import FooterButton from '../../../refundComponents/FooterButton';
+import CheckTerms from '../../../refundComponents/CheckTerms';
+import ExpenseDescriptionCard from '../../../refundComponents/ExpenseDescriptionCard';
 
 const Screen65 = () => {
   return (

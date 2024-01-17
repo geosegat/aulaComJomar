@@ -1,0 +1,67 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual é a capital do Canadá?",
+      "options": ["1. Toronto", "2. Ottawa", "3. Montreal", "4. Vancouver"],
+      "correctIndex": 1
+    },
+    {
+      "id": 2,
+      "question": "Quem é conhecido como 'Pai da Computação'?",
+      "options": [
+        "1. Alan Turing",
+        "2. Bill Gates",
+        "3. Steve Jobs",
+        "4. Mark Zuckerberg"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": 3,
+      "question": "Qual é o maior oceano do mundo?",
+      "options": [
+        "1. Oceano Atlântico",
+        "2. Oceano Índico",
+        "3. Oceano Pacífico",
+        "4. Mar Mediterrâneo"
+      ],
+      "correctIndex": 2
+    },
+    {
+      "id": 4,
+      "question": "Quem escreveu 'Dom Quixote'?",
+      "options": [
+        "1. Miguel de Cervantes",
+        "2. William Shakespeare",
+        "3. Leo Tolstoy",
+        "4. Jane Austen"
+      ],
+      "correctIndex": 0
+    },
+    {
+      "id": 5,
+      "question": "Qual é a capital da Austrália?",
+      "options": ["1. Sydney", "2. Melbourne", "3. Brisbane", "4. Canberra"],
+      "correctIndex": 3
+    },
+    {
+      "id": 1,
+      "question": "Qual é a capital do Canadá?",
+      "options": ["1. Toronto", "2. Ottawa", "3. Montreal", "4. Vancouver"],
+      "correctIndex": 1
+    },
+    {
+      "id": 1,
+      "question": "Qual é a capital do Canadá?",
+      "options": ["1. Toronto", "2. Ottawa", "3. Montreal", "4. Vancouver"],
+      "correctIndex": 1
+    },
+    {
+      "id": 1,
+      "question": "Qual é a capital do Canadá?",
+      "options": ["1. Toronto", "2. Ottawa", "3. Montreal", "4. Vancouver"],
+      "correctIndex": 1
+    }
+  ]
+}

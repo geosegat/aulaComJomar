@@ -2,9 +2,9 @@
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-import Navbar from '../../components/Navbar';
-import RefundCard from '../../refundComponents/RefundCard';
-import AppText from '../../components/AppText';
+import Navbar from '../../../components/Navbar';
+import RefundCard from '../../../refundComponents/RefundCard';
+import AppText from '../../../components/AppText';
 
 const Screen56 = () => {
   const navigation = useNavigation();

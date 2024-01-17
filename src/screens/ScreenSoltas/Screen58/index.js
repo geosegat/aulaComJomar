@@ -1,11 +1,11 @@
 import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import React from 'react';
 import {useNavigation} from '@react-navigation/native';
-import Navbar from '../../components/Navbar';
-import RefundCard from '../../refundComponents/RefundCard';
-import BankAccountCard from '../../refundComponents/BankAccountCard';
-import RowLabel from '../../refundComponents/RowLabel';
-import ProcedureGroupCard from '../../refundComponents/ProcedureGroupCard';
+import Navbar from '../../../components/Navbar';
+import RefundCard from '../../../refundComponents/RefundCard';
+import BankAccountCard from '../../../refundComponents/BankAccountCard';
+import RowLabel from '../../../refundComponents/RowLabel';
+import ProcedureGroupCard from '../../../refundComponents/ProcedureGroupCard';
 
 const Screen58 = () => {
   const navigation = useNavigation();
