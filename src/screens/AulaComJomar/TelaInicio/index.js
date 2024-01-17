@@ -1,10 +1,4 @@
-import {
-  ScrollView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import {ScrollView, StyleSheet, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import SvgConstruindo from './../../../../svgs/trabalhando.svg';
 import AppText from '../../../components/AppText';
