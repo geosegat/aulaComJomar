@@ -1,9 +1,9 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Navbar from '../../components/Navbar';
-import ContrastLabel from '../../refundComponents/ContrastLabel';
-import RadioButtonSelect from '../../refundComponents/RadioButtonSelect';
-import FooterButton from '../../refundComponents/FooterButton';
+import Navbar from '../../../components/Navbar';
+import ContrastLabel from '../../../refundComponents/ContrastLabel';
+import RadioButtonSelect from '../../../refundComponents/RadioButtonSelect';
+import FooterButton from '../../../refundComponents/FooterButton';
 import {useNavigation} from '@react-navigation/native';
 
 const Screen80 = () => {
