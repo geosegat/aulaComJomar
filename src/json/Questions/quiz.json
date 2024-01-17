@@ -2,66 +2,78 @@
   "questions": [
     {
       "id": 1,
-      "question": "Qual é a capital do Canadá?",
-      "options": ["1. Toronto", "2. Ottawa", "3. Montreal", "4. Vancouver"],
-      "correctIndex": 1
-    },
-    {
-      "id": 2,
-      "question": "Quem é conhecido como 'Pai da Computação'?",
-      "options": [
-        "1. Alan Turing",
-        "2. Bill Gates",
-        "3. Steve Jobs",
-        "4. Mark Zuckerberg"
-      ],
+      "question": "Qual é o nome do campeão conhecido como 'O Coração de Freljord'?",
+      "options": ["1. Braum", "2. Ashe", "3. Sejuani", "4. Lissandra"],
       "correctIndex": 0
     },
     {
+      "id": 2,
+      "question": "Qual é o nome do evento anual de fim de temporada em League of Legends?",
+      "options": ["1. Worlds", "2. MSI", "3. All-Stars", "4. Festa na Fenda"],
+      "correctIndex": 3
+    },
+    {
       "id": 3,
-      "question": "Qual é o maior oceano do mundo?",
+      "question": "Qual é o nome do atirador que se chama 'O Foragido'?",
+      "options": ["1. Lucian", "2. Jinx", "3. Vayne", "4. Miss Fortune"],
+      "correctIndex": 0
+    },
+    {
+      "id": 4,
+      "question": "Qual é o nome do poderoso mago do vazio em League of Legends?",
+      "options": ["1. Malzahar", "2. Kassadin", "3. Cho'Gath", "4. Vel'Koz"],
+      "correctIndex": 3
+    },
+    {
+      "id": 5,
+      "question": "Qual é a posição de jogo conhecida como 'Topo' em League of Legends?",
+      "options": ["1. Meio", "2. Selva", "3. Bot", "4. Superior"],
+      "correctIndex": 3
+    },
+    {
+      "id": 6,
+      "question": "Quantos jogadores compõem uma equipe em League of Legends?",
+      "options": ["1. 3", "2. 4", "3. 5", "4. 6"],
+      "correctIndex": 2
+    },
+    {
+      "id": 7,
+      "question": "Qual é o nome do dragão mais poderoso em Summoner's Rift?",
       "options": [
-        "1. Oceano Atlântico",
-        "2. Oceano Índico",
-        "3. Oceano Pacífico",
-        "4. Mar Mediterrâneo"
+        "1. Dragão Infernal",
+        "2. Dragão da Montanha",
+        "3. Dragão Oceânico",
+        "4. Dragão Ancião"
+      ],
+      "correctIndex": 3
+    },
+    {
+      "id": 8,
+      "question": "Quem é o campeão conhecido como 'O Espírito do Vento'?",
+      "options": ["1. Yasuo", "2. Riven", "3. Ahri", "4. Zephyr"],
+      "correctIndex": 0
+    },
+    {
+      "id": 9,
+      "question": "Qual é o nome do item que concede visão de área por um curto período de tempo?",
+      "options": [
+        "1. Ward",
+        "2. Oracle Lens",
+        "3. Scrying Orb",
+        "4. Farsight Alteration"
       ],
       "correctIndex": 2
     },
     {
-      "id": 4,
-      "question": "Quem escreveu 'Dom Quixote'?",
+      "id": 10,
+      "question": "Qual é o nome do evento que ocorre no meio da temporada competitiva em League of Legends?",
       "options": [
-        "1. Miguel de Cervantes",
-        "2. William Shakespeare",
-        "3. Leo Tolstoy",
-        "4. Jane Austen"
+        "1. Mid-Season Invitational (MSI)",
+        "2. All-Star Event",
+        "3. Worlds",
+        "4. Rift Rivals"
       ],
       "correctIndex": 0
-    },
-    {
-      "id": 5,
-      "question": "Qual é a capital da Austrália?",
-      "options": ["1. Sydney", "2. Melbourne", "3. Brisbane", "4. Canberra"],
-      "correctIndex": 3
-    },
-    {
-      "id": 1,
-      "question": "Qual é a capital do Canadá?",
-      "options": ["1. Toronto", "2. Ottawa", "3. Montreal", "4. Vancouver"],
-      "correctIndex": 1
-    },
-    {
-      "id": 1,
-      "question": "Qual é a capital do Canadá?",
-      "options": ["1. Toronto", "2. Ottawa", "3. Montreal", "4. Vancouver"],
-      "correctIndex": 1
-    },
-    {
-      "id": 1,
-      "question": "Qual é a capital do Canadá?",
-      "options": ["1. Toronto", "2. Ottawa", "3. Montreal", "4. Vancouver"],
-      "correctIndex": 1
     }
   ]
 }
