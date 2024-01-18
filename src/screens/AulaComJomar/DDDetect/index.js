@@ -2,8 +2,11 @@ import React, {useState} from 'react';
 import {StyleSheet, View, TouchableOpacity, TextInput} from 'react-native';
 import AppText from '../../../components/AppText';
 
+const ddds = require('./../../../json/DDDs/ddd.json');
+
 const DDDetect = () => {
   const [inputValue, setInputValue] = useState('');
+  const [estado, setEstado] = useState('');
 
   const numericButtonsLayout = [
     [1, 2, 3],
@@ -30,11 +33,24 @@ const DDDetect = () => {
   };
 
   const handleDeletePress = () => {
-    setInputValue(prevValue => prevValue.slice(0, -1));
+    setInputValue(prevValue => prevValue.slice(0, -2));
+  };
+
+  const localizarEstado = () => {
+    const estadoEncontrado = ddds.estados.find(item => item.ddd == inputValue);
+    console.log(estadoEncontrado);
+    if (estadoEncontrado) {
+      setEstado(estadoEncontrado.estado);
+    } else {
+      setEstado('Estado não localizado.');
+    }
   };
 
   return (
     <View style={styles.container}>
+      <AppText size="xhuge" color="white">
+        {estado}
+      </AppText>
       <TextInput
         value={inputValue}
         placeholder="Digite um número"
@@ -49,11 +65,20 @@ const DDDetect = () => {
       ))}
       <TouchableOpacity
         style={styles.containerNumeric}
-        onPress={handleDeletePress}>
+        onPress={localizarEstado}>
         <AppText variant="bold" color="#547789" size="super">
-          {'<'}
+          {'Pesquisar'}
         </AppText>
       </TouchableOpacity>
+      <TouchableOpacity
+        onPress={handleDeletePress}
+        style={{
+          height: 25,
+          width: 25,
+          backgroundColor: 'white',
+          borderRadius: 50,
+        }}
+      />
     </View>
   );
 };
@@ -61,7 +86,12 @@ const DDDetect = () => {
 export default DDDetect;
 
 const styles = StyleSheet.create({
-  container: {flex: 1, justifyContent: 'center', backgroundColor: '#2A2A2B'},
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#2A2A2B',
+    alignItems: 'center',
+  },
   input: {
     color: '#fff',
     borderWidth: 1,
