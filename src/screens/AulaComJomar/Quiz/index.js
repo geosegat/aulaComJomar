@@ -1,4 +1,6 @@
-import {FlatList, StyleSheet, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
+import {ProgressBar} from '@react-native-community/progress-bar-android';
+
 import React, {useState} from 'react';
 import QuestButton from '../../../components/QuestButton';
 import AppText from '../../../components/AppText';
@@ -20,7 +22,6 @@ const Quiz = () => {
     setAnswerIndex(selectedOptionIndex);
     setButtonNext(false);
     setValidarResposta(`Resposta ${selectedOptionIndex + 1} selecionada.`);
-    setDisabledButton(true);
     setButtonlabel('Confirmar resposta');
   };
 
@@ -31,11 +32,13 @@ const Quiz = () => {
         setButtonlabel('Proxima pergunta');
         setScore({certo: score.certo + 1, errado: score.errado});
         setColorResposta('green');
+        setDisabledButton(true);
       } else {
         setValidarResposta('Resposta incorreta');
         setButtonlabel('Proxima pergunta');
         setScore({certo: score.certo, errado: score.errado + 1});
         setColorResposta('red');
+        setDisabledButton(true);
       }
     } else {
       setCurrentQuestion(currentQuestion + 1);
@@ -80,6 +83,12 @@ const Quiz = () => {
 
   return (
     <View style={styles.container}>
+      <ProgressBar
+        progress={(currentQuestion + 1) / 10}
+        styleAttr="Horizontal"
+        color="#2491C9"
+        indeterminate={false}
+      />
       <View style={styles.containerCenterText}>
         <AppText style={styles.respostasContainer} size="huge" color="white">
           Pergunta n° {numberQuestion + 1}
@@ -90,15 +99,21 @@ const Quiz = () => {
       </View>
 
       <View>
-        {questions.questions[currentQuestion]?.options.map((option, index) => (
-          <QuestButton
-            isDisabled={disabledButton}
-            key={index}
-            label={option}
-            onPress={() => handleAnswer(index)}
-            style={styles.respostasContainer}
-          />
-        ))}
+        {questions.questions[currentQuestion]?.options.map((option, index) => {
+          let style = [styles.respostasContainer];
+          if (index === 2) {
+            style.push({backgroundColor: 'red'});
+          }
+          return (
+            <QuestButton
+              isDisabled={disabledButton}
+              key={index}
+              label={option}
+              onPress={() => handleAnswer(index)}
+              style={style}
+            />
+          );
+        })}
       </View>
 
       <View style={styles.containerCenterText}>

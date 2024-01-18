@@ -32,6 +32,9 @@ const TelaInicio = () => {
   const goQuiz = () => {
     navigation.navigate('Quiz');
   };
+  const goCalorieTrack = () => {
+    navigation.navigate('CalorieTrack');
+  };
 
   return (
     <View style={styles.container}>
@@ -90,6 +93,13 @@ const TelaInicio = () => {
         <TouchableOpacity style={styles.buttonContador} onPress={goQuiz}>
           <AppText size="xxlarge" variant="bold" color="#fff">
             Quiz
+          </AppText>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.buttonContador}
+          onPress={goCalorieTrack}>
+          <AppText size="xxlarge" variant="bold" color="#fff">
+            Calorie Track
           </AppText>
         </TouchableOpacity>
       </ScrollView>
