@@ -29,7 +29,7 @@ const Quiz = () => {
     if (buttonLabel.includes('Confirmar')) {
       if (answerIndex === questions.questions[currentQuestion].correctIndex) {
         setValidarResposta('Resposta correta');
-        setButtonlabel('Proxima pergunta');
+        setButtonlabel('Proxima pergua');
         setScore({certo: score.certo + 1, errado: score.errado});
         setColorResposta('green');
         setDisabledButton(true);
@@ -101,9 +101,6 @@ const Quiz = () => {
       <View>
         {questions.questions[currentQuestion]?.options.map((option, index) => {
           let style = [styles.respostasContainer];
-          if (index === 2) {
-            style.push({backgroundColor: 'red'});
-          }
           return (
             <QuestButton
               isDisabled={disabledButton}
