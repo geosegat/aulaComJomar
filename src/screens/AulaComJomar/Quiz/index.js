@@ -9,7 +9,6 @@ const questions = require('../../../json/Questions/quiz.json');
 
 const Quiz = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [numberQuestion, setNumberQuestion] = useState(0);
   const [validarResposta, setValidarResposta] = useState('');
   const [colorResposta, setColorResposta] = useState('white');
   const [buttonNext, setButtonNext] = useState(true);
@@ -70,10 +69,14 @@ const Quiz = () => {
             Sua pontuação final foi:
           </AppText>
           <AppText size="huge" color="green">
-            {score.certo} Respostas corretas
+            {score.certo > 1
+              ? `${score.certo} Respostas corretas`
+              : `${score.certo} Resposta correta`}
           </AppText>
           <AppText style={styles.respostasContainer} size="huge" color="red">
-            {score.errado} Respostas incorretas
+            {score.errado > 1
+              ? `${score.errado} Respostas erradas`
+              : `${score.errado} Resposta errada`}
           </AppText>
           <QuestButton onPress={onPressReset} label={'Refaça o quiz'} />
         </View>
@@ -91,7 +94,7 @@ const Quiz = () => {
       />
       <View style={styles.containerCenterText}>
         <AppText style={styles.respostasContainer} size="huge" color="white">
-          Pergunta n° {numberQuestion + 1}
+          Pergunta n° {currentQuestion + 1}
         </AppText>
         <AppText size="huge" color="white">
           {questions.questions[currentQuestion]?.question}
@@ -100,14 +103,17 @@ const Quiz = () => {
 
       <View>
         {questions.questions[currentQuestion]?.options.map((option, index) => {
+<<<<<<< HEAD
           let style = [styles.respostasContainer];
+=======
+>>>>>>> feature-aula
           return (
             <QuestButton
               isDisabled={disabledButton}
               key={index}
               label={option}
               onPress={() => handleAnswer(index)}
-              style={style}
+              style={styles.respostasContainer}
             />
           );
         })}
